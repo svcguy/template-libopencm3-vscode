@@ -1,0 +1,58 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/my-project/${projectName}.elf",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "targetArchitecture": "arm",
+            "miDebuggerPath": "${gccPath}/bin/arm-none-eabi-gdb.exe",
+            "customLaunchSetupCommands": [
+                {
+                    "text": "cd ${workspaceRoot}/src"
+                },
+                {
+                    "text": "target extended-remote ${COMPORT}"
+                },
+                {
+                    "text": "monitor version"
+                },
+                {
+                    "text": "monitor tpwr enable"
+                },
+                {
+                    "text": "monitor swdp_scan"
+                },
+                {
+                    "text": "attach 1"
+                },
+                {
+                    "text": "file ${projectName}.elf"
+                },
+                {
+                    "text": "load"
+                },
+                {
+                    "text": "compare-sections"
+                },
+                {
+                    "text": "set mem inaccessible-by-default off"
+                },
+                {
+                    "text": "break main"
+                }
+            ],
+        }
+        
+    ]
+}
