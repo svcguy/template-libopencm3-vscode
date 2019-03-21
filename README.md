@@ -13,7 +13,7 @@ git submodule init
 git submodule update
 -then edit the files necessary to match your environment (see below)
 cd libopencm3
-make (I run this from the WSL)
+make (I run this from the WSL using a terminal from within VSCode)
 cd ..
 make -C src (or use the build command from VSCode to build your project)
 
