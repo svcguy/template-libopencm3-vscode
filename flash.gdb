@@ -1,6 +1,6 @@
 cd src
-target extended-remote $COMPORT
-file $ELFNAME.elf
+target extended-remote COM8
+file project.elf
 monitor version
 monitor tpwr enable
 monitor swdp_scan

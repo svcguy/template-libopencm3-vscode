@@ -38,8 +38,6 @@
             "type": "shell",
             "command": "arm-none-eabi-gdb",
             "args": [
-                "set $ELFNAME=${projectName}",
-                "set $COMPORT=${COMMPORT}",
                 "--command=flash.gdb"
             ],
             "group": "build",
@@ -49,6 +47,18 @@
                 }
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Size",
+            "type": "shell",
+            "command": "arm-none-eabi-size",
+            "args": [
+                "./src/project.elf"
+            ],
+            "group": "none",
+            "problemMatcher": [
+                
+            ]
         }
     ]
 }

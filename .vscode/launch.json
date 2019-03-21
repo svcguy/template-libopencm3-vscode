@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/my-project/${projectName}.elf",
+            "program": "${workspaceFolder}/src/project.elf",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
@@ -16,13 +16,13 @@
             "externalConsole": true,
             "MIMode": "gdb",
             "targetArchitecture": "arm",
-            "miDebuggerPath": "${gccPath}/bin/arm-none-eabi-gdb.exe",
+            "miDebuggerPath": "C:/Program Files (x86)/GNU Tools ARM Embedded/6 2017-q2-update/bin/arm-none-eabi-gdb.exe",
             "customLaunchSetupCommands": [
                 {
                     "text": "cd ${workspaceRoot}/src"
                 },
                 {
-                    "text": "target extended-remote ${COMPORT}"
+                    "text": "target extended-remote COM8"
                 },
                 {
                     "text": "monitor version"
@@ -37,7 +37,7 @@
                     "text": "attach 1"
                 },
                 {
-                    "text": "file ${projectName}.elf"
+                    "text": "file project.elf"
                 },
                 {
                     "text": "load"

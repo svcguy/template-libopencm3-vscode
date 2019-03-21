@@ -5,7 +5,7 @@ SHARED_DIR = ../lib
 CFILES = main.c
 
 # TODO - you will need to edit these two lines!
-DEVICE=stm32l082kz
+DEVICE=stm32l082cz
 OOCD_FILE=
 
 # You shouldn't have to edit anything below here.
